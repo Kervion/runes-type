@@ -82,11 +82,10 @@ a {
   margin-top: 10px;
 }
 h1 {
-  font-family: "Caesar Dressing", cursive;
-  color: rgb(191, 199, 157);
-  font-size: 40px;
+  color: rgb(223, 223, 179);
+  font-size: 60px;
   letter-spacing: 6px;
-  margin: 24px 0px 8px 0px;
+  margin: -40px 0px 46px 0px;
   text-shadow: 2px 2px 4px #000000;
 }
 h4 {
