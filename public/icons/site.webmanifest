@@ -1,0 +1,19 @@
+{
+  "name": "Kervion",
+  "short_name": "Kervion",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#6c7c7c",
+  "background_color": "#6c7c7c",
+  "display": "standalone"
+}

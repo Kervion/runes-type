@@ -1,107 +1,120 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  height: 100%;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.info {
+  position: fixed;
+  z-index: 10;
+  top: 20px;
+  right: 20px;
+  display: flex;
 }
-
+.info:hover {
+  cursor: pointer;
+}
+.text {
+  padding: 10px 20px;
+  background-color: #6c7c7c;
+  margin-right: 10px;
+}
+.title {
+  color: #ffbb00;
+}
 a {
-  color: inherit;
+  color: #91b8b3;
   text-decoration: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.open {
+  background-color: #6c7c7c;
+  padding: 10px;
+}
+.inputx {
+  width: 70px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ffbb00;
+  border-color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.inputx:focus {
+  outline: none;
+}
+.buttonx {
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(236, 245, 197);
+  font-size: 15px;
+  padding: 8px 17px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+}
+.buttonx:hover {
+  background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+  background-color: #6c7c7c;
+}
+.buttonx:active {
+  position: relative;
+  top: 1px;
+}
+.square {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle closest-side at center, rgb(255, 212, 93), rgba(255, 215, 0, 0));
+  /* ten kolor do druku !!! */
+  /* background: radial-gradient(circle closest-side at center, rgb(255, 255, 255), rgba(255, 255, 255, 0)); */
+}
+.interface {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-top: 10px;
+}
+h1 {
+  font-family: "Caesar Dressing", cursive;
+  color: rgb(191, 199, 157);
+  font-size: 40px;
+  letter-spacing: 6px;
+  margin: 24px 0px 8px 0px;
+  text-shadow: 2px 2px 4px #000000;
+}
+h4 {
+  color: rgb(236, 245, 197);
+  letter-spacing: 1px;
+  margin: 0px;
+  margin-top: 15px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.flex_container {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.canvas {
+  text-align: center;
+  position: relative;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(../assets/runes_2.jpg);
+  background-size: cover;
+  background-position: center;
 }
