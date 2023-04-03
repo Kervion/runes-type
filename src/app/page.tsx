@@ -115,8 +115,41 @@ export default function Jsdraw() {
     }
   }
 
+  const [view, setView] = useState(false)
+  const handleInfo = () => {
+    setView(!view)
+  }
+
   return (
     <div className="flex_container">
+      <div className="info">
+        {view && (
+          <div className="text">
+            <span className="title">About The Runes</span>
+            <br />
+            <br />
+            author : Q 2023
+            <br />
+            task :{" "}
+            <a href="https://moleculeone.notion.site/Code-assignment-JS-Q4-22-f1f17670f99245d0b821c5768ea1fcdf" target="_blank">
+              Numbers to runic...
+            </a>
+            <br />
+            git repo :{" "}
+            <a href="https://github.com/Kervion/runes-public" target="_blank">
+              Runes - public
+            </a>
+            <br />
+            algorithm : cross matrix
+            <br />
+            backgroud : midjourney
+          </div>
+        )}
+        <div className="open" onClick={handleInfo}>
+          info
+        </div>
+      </div>
+
       <h1 className={caesar.className}>the runes</h1>
 
       <div ref={printRef} className="square">
