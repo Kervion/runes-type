@@ -28,7 +28,7 @@ export default function Jsdraw() {
   const C: number[] = [-1, 0]
   const D: number[] = [1, 0]
 
-  const drawZero = (context: any) => {
+  const drawZero = (context: CanvasRenderingContext2D) => {
     context.beginPath()
     context.moveTo(Z[0] + T[0], Z[1] + T[1])
     context.lineTo(Z[2] + T[0], Z[3] + T[1])
@@ -36,19 +36,19 @@ export default function Jsdraw() {
   }
   // drawing 1, 2, 3, 4, 6
   // PX, PY - factors ABCD correspond to the order of magnitude
-  const drawLine = (context: any, DIGIT: number[], PX: number, PY: number) => {
+  const drawLine = (context: CanvasRenderingContext2D, DIGIT: number[], PX: number, PY: number) => {
     context.beginPath()
     context.moveTo(((DIGIT[0] * height) / 4) * PX + T[0], (DIGIT[1] * height) / 4 + T[1] + PY * (width - (2 * DIGIT[1] * height) / 4))
     context.lineTo(((DIGIT[2] * height) / 4) * PX + T[0], (DIGIT[3] * height) / 4 + T[1] + PY * (width - (2 * DIGIT[3] * height) / 4))
     context.stroke()
   }
   // drawing 5, 7, 8
-  const drawDouble = (context: any, LI: number[], BI: number[], PX: number, PY: number) => {
+  const drawDouble = (context: CanvasRenderingContext2D, LI: number[], BI: number[], PX: number, PY: number) => {
     drawLine(context, LI, PX, PY)
     drawLine(context, BI, PX, PY)
   }
   // drawing 9
-  const drawNine = (context: any, PX: number, PY: number) => {
+  const drawNine = (context: CanvasRenderingContext2D, PX: number, PY: number) => {
     drawLine(context, JE, PX, PY)
     drawLine(context, DW, PX, PY)
     drawLine(context, SZ, PX, PY)
